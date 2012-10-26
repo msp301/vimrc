@@ -1,3 +1,5 @@
+set nocompatible
+
 "------General Settings------
 set number
 set tabstop=4
@@ -40,7 +42,6 @@ nmap <S-Tab> <<
 "endfunc
 
 "------Vundle Settings------
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
