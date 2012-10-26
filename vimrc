@@ -60,6 +60,7 @@ Bundle 'bad-whitespace'
 "
 " Git repos
 Bundle 'https://github.com/scrooloose/nerdtree.git'
+Bundle 'https://github.com/kingbin/vim-arduino.git'
 
 filetype plugin indent on
 "
