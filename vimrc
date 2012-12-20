@@ -12,6 +12,9 @@ set laststatus=2
 set showmatch
 set list
 set listchars=tab:->
+" TA:  2012-12-20:  Use "xterm2" ttymouse settings so that tmux can
+" pass-through the escape sequences to Vim to enable pane selection, etc.
+set ttymouse=xterm2
 colorscheme elflord
 
 "------Search Settings------
