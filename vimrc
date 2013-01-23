@@ -17,6 +17,9 @@ set listchars=tab:->
 set ttymouse=xterm2
 colorscheme elflord
 
+set backupdir=~/.vim-backupsdir
+set dir=~/.vim-swapdir
+
 "------Search Settings------
 set smartindent
 set incsearch
