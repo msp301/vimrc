@@ -63,6 +63,7 @@ Bundle 'comments.vim'
 Bundle 'Tagbar'
 Bundle 'SuperTab'
 Bundle 'bad-whitespace'
+Bundle 'surround.vim'
 "
 " Git repos
 Bundle 'https://github.com/scrooloose/nerdtree.git'
