@@ -65,9 +65,9 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'comments.vim'
 Bundle 'Tagbar'
-Bundle 'SuperTab'
 Bundle 'bad-whitespace'
 Bundle 'surround.vim'
+Bundle 'Valloric/YouCompleteMe'
 "
 " Git repos
 Bundle 'https://github.com/scrooloose/nerdtree.git'
