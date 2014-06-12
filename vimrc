@@ -18,10 +18,27 @@ set listchars=tab:→\ ,
 " pass-through the escape sequences to Vim to enable pane selection, etc.
 set ttymouse=xterm2
 set spelllang=en_gb
-colorscheme elflord
 
 set backupdir=~/.vim-backupsdir
 set dir=~/.vim-swapdir
+
+"------Theme Settings------
+set background=dark
+set t_Co=256
+" Solarized theme installed by Vundle requires a simlink from
+" ~/.vim/colors -> ~/.vim/bundles/vim-colors-solarized
+colorscheme solarized
+
+" Airline Status Bar Settings
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = '⎇ '
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
 
 "------Search Settings------
 set smartindent
@@ -74,6 +91,7 @@ Bundle 'https://github.com/kingbin/vim-arduino.git'
 Bundle 'https://github.com/airblade/vim-gitgutter.git'
 Bundle 'https://github.com/bling/vim-airline.git'
 Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 
 filetype plugin indent on
 "
