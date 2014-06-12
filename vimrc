@@ -17,7 +17,6 @@ set listchars=tab:→\ ,
 " TA:  2012-12-20:  Use "xterm2" ttymouse settings so that tmux can
 " pass-through the escape sequences to Vim to enable pane selection, etc.
 set ttymouse=xterm2
-set spell
 set spelllang=en_gb
 colorscheme elflord
 
@@ -72,6 +71,9 @@ Bundle 'Valloric/YouCompleteMe'
 " Git repos
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/kingbin/vim-arduino.git'
+Bundle 'https://github.com/airblade/vim-gitgutter.git'
+Bundle 'https://github.com/bling/vim-airline.git'
+Bundle 'https://github.com/tpope/vim-fugitive.git'
 
 filetype plugin indent on
 "
