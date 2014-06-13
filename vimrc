@@ -100,6 +100,7 @@ Bundle 'https://github.com/kingbin/vim-arduino.git'
 Bundle 'https://github.com/airblade/vim-gitgutter.git'
 Bundle 'https://github.com/bling/vim-airline.git'
 Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
 
 filetype plugin indent on
 "
