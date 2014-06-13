@@ -31,3 +31,6 @@ rm()
 
 	echo "$ques_start $ques_end"
 }
+
+# Force tmux to use 256-color support
+alias tmux='tmux -2'
