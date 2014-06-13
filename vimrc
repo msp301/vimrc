@@ -40,6 +40,17 @@ let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Git Gutter Settings
+highlight SignColumn ctermbg=black
+highlight GitGutterAdd ctermbg=black
+highlight GitGutterAdd ctermfg=green
+highlight GitGutterChange ctermbg=black
+highlight GitGutterChange ctermfg=yellow
+highlight GitGutterDelete ctermbg=black
+highlight GitGutterDelete ctermfg=red
+highlight GitGutterChangeDelete ctermbg=black
+highlight GitGutterChangeDelete ctermfg=yellow
+
 "------Search Settings------
 set smartindent
 set incsearch
