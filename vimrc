@@ -38,16 +38,14 @@ let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" Git Gutter Settings
+" changesPlugin Settings
+let g:changes_vcs_check = 1
+let g:changes_autocmd = 1
+let g:changes_respect_SignColumn = 1
 highlight SignColumn ctermbg=black
-highlight GitGutterAdd ctermbg=black
-highlight GitGutterAdd ctermfg=green
-highlight GitGutterChange ctermbg=black
-highlight GitGutterChange ctermfg=yellow
-highlight GitGutterDelete ctermbg=black
-highlight GitGutterDelete ctermfg=red
-highlight GitGutterChangeDelete ctermbg=black
-highlight GitGutterChangeDelete ctermfg=yellow
+highlight ChangesSignTextAdd ctermbg=green ctermfg=lightgreen
+highlight ChangesSignTextDel ctermbg=red ctermfg=lightred
+highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
 
 "------Search Settings------
 set smartindent
@@ -97,7 +95,7 @@ Bundle 'Valloric/YouCompleteMe'
 " Git repos
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/kingbin/vim-arduino.git'
-Bundle 'https://github.com/airblade/vim-gitgutter.git'
+Bundle 'https://github.com/chrisbra/changesPlugin.git'
 Bundle 'https://github.com/bling/vim-airline.git'
 Bundle 'https://github.com/tpope/vim-fugitive.git'
 Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
