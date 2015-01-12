@@ -78,36 +78,33 @@ nmap <S-Tab> <<
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 "let Vundle manage itself
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
+" My Plugins here:
 "
 " vim-scripts repos
-Bundle 'comments.vim'
-Bundle 'Tagbar'
-Bundle 'bad-whitespace'
-Bundle 'surround.vim'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'comments.vim'
+Plugin 'Tagbar'
+Plugin 'bad-whitespace'
+Plugin 'surround.vim'
+Plugin 'Valloric/YouCompleteMe'
 "
 " Git repos
-Bundle 'https://github.com/scrooloose/nerdtree.git'
-Bundle 'https://github.com/kingbin/vim-arduino.git'
-Bundle 'https://github.com/chrisbra/changesPlugin.git'
-Bundle 'https://github.com/bling/vim-airline.git'
-Bundle 'https://github.com/tpope/vim-fugitive.git'
-Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/kingbin/vim-arduino.git'
+Plugin 'https://github.com/chrisbra/changesPlugin.git'
+Plugin 'https://github.com/bling/vim-airline.git'
+Plugin 'https://github.com/tpope/vim-fugitive.git'
+Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 
+call vundle#end()
 filetype plugin indent on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
