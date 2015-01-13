@@ -47,6 +47,9 @@ highlight ChangesSignTextAdd ctermbg=green ctermfg=lightgreen
 highlight ChangesSignTextDel ctermbg=red ctermfg=lightred
 highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
 
+" Tagbar Plugin Settings
+let g:tagbar_updateonsave_maxlines = 5000
+
 "------Search Settings------
 set smartindent
 set incsearch
