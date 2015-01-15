@@ -18,6 +18,8 @@ set listchars=tab:→\ ,
 " pass-through the escape sequences to Vim to enable pane selection, etc.
 set ttymouse=xterm2
 set spelllang=en_gb
+" Provide access to system clipboard
+set clipboard=unnamedplus
 
 set backupdir=~/.vim-backupsdir
 set dir=~/.vim-swapdir
