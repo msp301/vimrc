@@ -29,6 +29,12 @@ set background=dark
 set t_Co=256
 colorscheme elflord
 
+" Omni-completion popup menu
+highlight Pmenu ctermfg=black ctermbg=grey gui=bold
+highlight PmenuSel ctermfg=white ctermbg=darkgrey gui=bold
+
+"------Plugin Settings------
+
 " Airline Status Bar Settings
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -51,6 +57,21 @@ highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
 
 " Tagbar Plugin Settings
 let g:tagbar_updateonsave_maxlines = 5000
+
+" YouCompleteMe Plugin Settings
+" Required for cooperation with Syntastic
+let g:ycm_show_diagnostics_ui = 0
+
+" Syntastic Plugin Settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_balloons = 1
+
+" Syntastic - Perl Checker Settings
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = [ 'perl', 'podchecker' ]
 
 "------Search Settings------
 set smartindent
@@ -96,6 +117,8 @@ Plugin 'Tagbar'
 Plugin 'bad-whitespace'
 Plugin 'surround.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Syntastic'
+
 "
 " Git repos
 Plugin 'https://github.com/scrooloose/nerdtree.git'
