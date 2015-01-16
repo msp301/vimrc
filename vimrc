@@ -83,22 +83,7 @@ set smartcase
 nmap <F5> :NERDTreeToggle<CR>
 nmap <F6> :TagbarToggle<CR>
 nmap <C-T> :tabedit<CR>
-"nmap <C-W> :tabclose<CR>
 nmap <S-Tab> <<
-"imap <S-Tab> <ESC><i
-
-"------Syntax Languages------
-"au BufNewFile,BufRead *.tt call s:AdjustTT2Type()
-
-"func! s:AdjustTT2Type()
-"	if ( ( getline(1) . getline(2) . getline(3) =~ '<\chtml'
-"			&& getline(1) . getline(2) . getline(3) !~ '<[%?]' )
-"			|| getline(1) =~ '<!DOCTYPE HTML' )
-"		setf tt2html
-"	else
-"		setf tt2
-"	endif
-"endfunc
 
 "------Vundle Settings------
 filetype off
@@ -126,7 +111,6 @@ Plugin 'https://github.com/kingbin/vim-arduino.git'
 Plugin 'https://github.com/chrisbra/changesPlugin.git'
 Plugin 'https://github.com/bling/vim-airline.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
-Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 
 call vundle#end()
 filetype plugin indent on
