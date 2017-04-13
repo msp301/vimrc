@@ -19,6 +19,8 @@ DEPENDENCIES="vim-nox \
 	python3-dev \
 	exuberant-ctags \
 	sudo \
+	curl \
+	zsh \
 "
 
 # --- Check required dependencies are installed ---
@@ -153,6 +155,24 @@ else
 	echo "Creating link to $TMUX_CONF"
 	eval "$LINK_TMUX"
 fi
+
+# ---- Setup zsh ----
+
+while true; do
+	read -p "Install Oh My Zsh? (y/n)" ans
+	case $ans in
+		[Yy]*)
+			sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+			break
+			;;
+		[Nn]*)
+			break
+			;;
+		*)
+			echo "Try again ..."
+			;;
+	esac
+done
 
 echo "All done :-)"
 exit 0
