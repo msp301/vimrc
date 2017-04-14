@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Neovim - https://neovim.io/
+#
+# Neovim is Vim for the 21st century.
+# The editor is being refactored to tidy up its codebase to add some modern
+# features whilst staying lightweight and true to the Vim we love.
+#
+# --- Install Neovim ---
+#
+# This script will remove the files installed by Neovim when using the
+# 'install_neovim' script provided by this respository. The uninstall process
+# for Neovim is documented by the Neovim team here:
+#
+# https://github.com/neovim/neovim/wiki/Building-Neovim
+
+sudo rm -f /usr/local/bin/nvim
+sudo rm -rf /usr/local/share/nvim/

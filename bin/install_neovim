@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Neovim - https://neovim.io/
+#
+# Neovim is Vim for the 21st century.
+# The editor is being refactored to tidy up its codebase to add some modern
+# features whilst staying lightweight and true to the Vim we love.
+#
+# --- Install Neovim ---
+#
+# This script will build and install the latest Neovim release to save time
+# by not having to run through the setup manually. The setup process follows
+# the Neovim build guide, documented by the Neovim team here:
+#
+# https://github.com/neovim/neovim/wiki/Building-Neovim
+
+REPO_DIR="$HOME/src"
+
+# Prerequisites
+sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+
+# Retrieve latest Neovim
+mkdir -p "$REPO_DIR"
+cd "$REPO_DIR"
+if [ ! -d "$REPO_DIR/neovim" ]; then
+	git clone "https://github.com/neovim/neovim"
+fi
+cd "neovim" && rm -rf build
+git checkout master
+git pull
+
+# Build the latest stable Neovim version
+NEOVIM_LATEST=$(git describe --abbrev=0)
+git checkout "$NEOVIM_LATEST"
+make
+
+if [ $? != 0 ]; then
+	# Build errored. Abort.
+	echo "Error trying to build Neovim"
+	exit 1
+fi
+
+# Install Neovim
+sudo make install
