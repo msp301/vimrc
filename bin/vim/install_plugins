@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Vim plugins are being managed by Vundle.
+# https://github.com/VundleVim/Vundle.vim
+#
+# YouCompleteMe is a code completion plugin for Vim ``that's quick to give
+# results. To be nice and snappy, YouComplete needs to be compiled.
+# https://github.com/Valloric/YouCompleteMe
+#
+# --- Install Vim plugins ---
+#
+# This script gets Vundle installed and then asks it to handle installing
+# all the plugins for us.
+# We then get YouCompleteMe built so that everything's ready to go.
+
+BUNDLE_DIR="$HOME/.vim/bundle"
+VUNDLE_DIR="$BUNDLE_DIR/vundle"
+if [ ! -d "$VUNDLE_DIR" ]; then
+	echo "Installing Vundle"
+	git clone "https://github.com/VundleVim/Vundle.vim.git" "$HOME/.vim/bundle/vundle"
+fi
+
+echo "Installing Vim plugins"
+vim +PluginInstall +qall
+
+echo "Compiling YouCompleteMe plugin"
+YCM_DIR="$BUNDLE_DIR/YouCompleteMe"
+CURRENT_DIR=$(pwd)
+cd "$YCM_DIR"
+./install.py --clang-completer
+cd "$CURRENT_DIR"
