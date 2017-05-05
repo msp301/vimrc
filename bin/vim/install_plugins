@@ -27,5 +27,5 @@ echo "Compiling YouCompleteMe plugin"
 YCM_DIR="$BUNDLE_DIR/YouCompleteMe"
 CURRENT_DIR=$(pwd)
 cd "$YCM_DIR"
-./install.py --clang-completer
+./install.py --all
 cd "$CURRENT_DIR"

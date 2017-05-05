@@ -39,6 +39,10 @@ DEPENDENCIES="vim-nox \
 	sudo \
 	curl \
 	zsh \
+	mono-xbuild \
+	golang \
+	node-typescript \
+	npm \
 "
 
 # --- Check required dependencies are installed ---
