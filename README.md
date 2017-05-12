@@ -4,7 +4,7 @@ When coding the next best thing, I never want my train of thought broken to
 fighting my editor.
 
 My "Dotfiles for Getting Things Done" aim to provide a development setup that
-doesn't get in the way but provides enough assistence to help get the job
+doesn't get in the way but provides enough assistance to help get the job
 done.
 
 Setup scripts are provided to get everything up and running ASAP.
