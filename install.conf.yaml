@@ -1,0 +1,16 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
+    ~/.config/nvim/init.vim: init.vim
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [mkdir -p "$HOME/.vim-backupsdir", Installing Vim backup directory]
+    - [mkdir -p "$HOME/.vim-swapdir", Installing Vim swap directory]
