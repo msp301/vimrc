@@ -1,18 +1,18 @@
 "------Plugin Settings------
 call plug#begin()
 
-Plug 'comments.vim'
-Plug 'Tagbar'
-Plug 'bad-whitespace'
-Plug 'surround.vim'
-Plug 'Syntastic'
+Plug 'sudar/comments.vim'
+Plug 'majutsushi/Tagbar'
+Plug 'bitc/vim-bad-whitespace'
+Plug 'tpope/vim-surround'
+Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'kingbin/vim-arduino'
 Plug 'chrisbra/changesPlugin'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
 
 call plug#end()

@@ -9,6 +9,7 @@
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
     ~/.config/nvim/init.vim: init.vim
+    ~/.local/share/nvim/site/autoload/plug.vim: vim-plug/plug.vim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
