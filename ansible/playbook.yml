@@ -29,3 +29,36 @@
                 - "{{ tmux_package }}"
                 - "{{ vim_package }}"
                 - "{{ zsh_package }}"
+            when: item != ""
+
+          - name: Symlink Neovim config
+            file:
+                    src={{ repo_dir }}/init.vim
+                    dest=~/.config/nvim/init.vim
+                    state=link
+
+          - name: Create vim-plug directory
+            file: path=~/.local/share/nvim/site/autoload state=directory
+
+          - name: Install vim-plug
+            copy:
+                    src={{ repo_dir }}/vim-plug/plug.vim
+                    dest=~/.local/share/nvim/site/autoload/plug.vim
+
+          - name: Install Neovim plugins
+            command: nvim --headless +PlugInstall +qall
+
+          - name: Create Vim backup directory
+            file: path=~/.vim-backupsdir state=directory
+
+          - name: Create Vim swap directory
+            file: path=~/.vim-swapdir state=directory
+
+          - name: Symlink tmux config
+            file:
+                    src={{ repo_dir }}/tmux.conf
+                    dest=~/.tmux.conf
+                    state=link
+
+          - name: Install Oh-My-Zsh
+            shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
