@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+  tasks:
+          - include_vars: "{{ item }}"
+            with_first_found:
+                - "vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int }}.yml"
+                - "vars/{{ ansible_distribution }}.yml"
+                - "vars/{{ ansible_os_family }}.yml"
+                - "vars/default.yml"
+
+          - name: Install dependencies
+            become: true
+            become_method: su
+            become_user: root
+            package: name={{ item }} state=latest
+            with_items:
+                - "{{ build_essential_package }}"
+                - "{{ cmake_package }}"
+                - "{{ curl_package }}"
+                - "{{ exuberant_ctags_package }}"
+                - "{{ git_package }}"
+                - "{{ golang_package }}"
+                - "{{ mono_xbuild }}"
+                - "{{ node_typescript_package }}"
+                - "{{ npm_package }}"
+                - "{{ python_dev_package }}"
+                - "{{ python3_dev_package }}"
+                - "{{ sudo_package }}"
+                - "{{ tmux_package }}"
+                - "{{ vim_package }}"
+                - "{{ zsh_package }}"
