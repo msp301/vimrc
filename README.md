@@ -27,3 +27,11 @@ Run `./setup` and follow the steps :-)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
+
+# TODO
+
+- Fix YouCompleteMe library link on Arch Linux
+- Finish adding Typescript support
+- Complete Ansible installation for Arch Linux
+- Complete Ansible installation for Debian
+- Update README
