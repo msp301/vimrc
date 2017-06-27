@@ -11,6 +11,7 @@ Plug 'kingbin/vim-arduino'
 Plug 'chrisbra/changesPlugin'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
