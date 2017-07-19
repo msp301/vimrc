@@ -13,8 +13,8 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
-autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
+" Deoplete completer for Neovim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -75,9 +75,9 @@ highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
 " Tagbar Plugin Settings
 let g:tagbar_updateonsave_maxlines = 5000
 
-" YouCompleteMe Plugin Settings
-" Required for cooperation with Syntastic
-let g:ycm_show_diagnostics_ui = 0
+" Deoplete Plugin Settings
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Syntastic Plugin Settings
 let g:syntastic_always_populate_loc_list = 1
