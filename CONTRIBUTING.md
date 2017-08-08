@@ -24,4 +24,5 @@ git pull -s vim-plug vimplug 0.9.1
 ## Read more about subtrees
 
 [https://help.github.com/articles/about-git-subtree-merges/](https://help.github.com/articles/about-git-subtree-merges/)
+
 [https://git-scm.com/book/en/v1/Git-Tools-Subtree-Merging](https://git-scm.com/book/en/v1/Git-Tools-Subtree-Merging)
