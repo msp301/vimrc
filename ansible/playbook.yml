@@ -1,0 +1,66 @@
+---
+- hosts: localhost
+  tasks:
+          - include_vars: "{{ item }}"
+            with_first_found:
+                - "vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int }}.yml"
+                - "vars/{{ ansible_distribution }}.yml"
+                - "vars/{{ ansible_os_family }}.yml"
+                - "vars/default.yml"
+
+          - name: Install dependencies
+            become: true
+            become_method: su
+            become_user: root
+            package: name={{ item }} state=latest
+            with_items:
+                - "{{ build_essential_package }}"
+                - "{{ cmake_package }}"
+                - "{{ curl_package }}"
+                - "{{ exuberant_ctags_package }}"
+                - "{{ git_package }}"
+                - "{{ golang_package }}"
+                - "{{ mono_xbuild }}"
+                - "{{ node_typescript_package }}"
+                - "{{ npm_package }}"
+                - "{{ python_dev_package }}"
+                - "{{ python3_dev_package }}"
+                - "{{ sudo_package }}"
+                - "{{ tmux_package }}"
+                - "{{ vim_package }}"
+                - "{{ vim_python2_package }}"
+                - "{{ vim_python3_package }}"
+                - "{{ zsh_package }}"
+            when: item != ""
+
+          - name: Symlink Neovim config
+            file:
+                    src={{ repo_dir }}/init.vim
+                    dest=~/.config/nvim/init.vim
+                    state=link
+
+          - name: Create vim-plug directory
+            file: path=~/.local/share/nvim/site/autoload state=directory
+
+          - name: Install vim-plug
+            copy:
+                    src={{ repo_dir }}/vim-plug/plug.vim
+                    dest=~/.local/share/nvim/site/autoload/plug.vim
+
+          - name: Install Neovim plugins
+            command: nvim --headless +PlugInstall +qall
+
+          - name: Create Vim backup directory
+            file: path=~/.vim-backupsdir state=directory
+
+          - name: Create Vim swap directory
+            file: path=~/.vim-swapdir state=directory
+
+          - name: Symlink tmux config
+            file:
+                    src={{ repo_dir }}/tmux.conf
+                    dest=~/.tmux.conf
+                    state=link
+
+          - name: Install Oh-My-Zsh
+            shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

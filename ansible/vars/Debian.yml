@@ -1,0 +1,20 @@
+#
+# Ansible variables file
+#
+# Debian package names
+#
+build_essential_package: "build-essential"
+cmake_package: "cmake"
+curl_package: "curl"
+exuberant_ctags_package: "exuberant-ctags"
+git_package: "git"
+golang_package: "golang"
+mono_xbuild: "mono-xbuild"
+node_typescript_package: "node-typescript"
+npm_package: "npm"
+python_dev_package: "python-dev"
+python3_dev_package: "python3-dev"
+sudo_package: "sudo"
+tmux_package: "tmux"
+vim_package: "vim"
+zsh_package: "zsh"

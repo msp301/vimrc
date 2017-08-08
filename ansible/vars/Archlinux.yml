@@ -1,0 +1,22 @@
+#
+# Ansible variables file
+#
+# Arch Linux package names
+#
+build_essential_package: "base-devel"
+cmake_package: "cmake"
+curl_package: "curl"
+exuberant_ctags_package: "ctags"
+git_package: "git"
+golang_package: "go"
+mono_xbuild: ""
+node_typescript_package: "typescript"
+npm_package: "npm"
+python_dev_package: "python2"
+python3_dev_package: "python"
+sudo_package: "sudo"
+tmux_package: "tmux"
+vim_package: "neovim"
+vim_python2_package: "python2-neovim"
+vim_python3_package: "python-neovim"
+zsh_package: "zsh"

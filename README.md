@@ -13,6 +13,21 @@ Setup scripts are provided to get everything up and running ASAP.
 
 Run `./setup` and follow the steps :-)
 
+## Neovim
+
+## Neovim plugins
+
+- [bad-whitespace](https://github.com/bitc/vim-bad-whitespace)
+- [NERD Commenter](https://github.com/scrooloose/nerdcommenter)
+- [NERDtree](https://github.com/scrooloose/nerdtree)
+- [surround.vim](https://github.com/tpope/vim-surround)
+- [Syntastic](https://github.com/vim-syntastic/syntastic)
+- [Tagbar](https://github.com/majutsushi/tagbar)
+- [typescript-vim](https://github.com/leafgarland/typescript-vim)
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+
 ## Vim
 
 ## Vim plugins
@@ -27,3 +42,9 @@ Run `./setup` and follow the steps :-)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
+
+# TODO
+
+- Finish adding Typescript support
+- Complete Ansible installation for Debian
+- Update README

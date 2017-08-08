@@ -116,6 +116,7 @@ Plugin 'https://github.com/kingbin/vim-arduino.git'
 Plugin 'https://github.com/chrisbra/changesPlugin.git'
 Plugin 'https://github.com/bling/vim-airline.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
+Plugin 'https://github.com/leafgarland/typescript-vim.git'
 
 call vundle#end()
 filetype plugin indent on

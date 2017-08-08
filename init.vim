@@ -1,19 +1,20 @@
 "------Plugin Settings------
 call plug#begin()
 
-Plug 'comments.vim'
-Plug 'Tagbar'
-Plug 'bad-whitespace'
-Plug 'surround.vim'
-Plug 'Syntastic'
+Plug 'majutsushi/Tagbar'
+Plug 'bitc/vim-bad-whitespace'
+Plug 'tpope/vim-surround'
+Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'kingbin/vim-arduino'
 Plug 'chrisbra/changesPlugin'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
+" Deoplete completer for Neovim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -74,9 +75,18 @@ highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
 " Tagbar Plugin Settings
 let g:tagbar_updateonsave_maxlines = 5000
 
-" YouCompleteMe Plugin Settings
-" Required for cooperation with Syntastic
-let g:ycm_show_diagnostics_ui = 0
+" Deoplete Plugin Settings
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" NERDCommenter Plugin Settings
+let g:NERDSpaceDelims = 1
+let g:NERDUsePlaceHolders = 0
+let g:NERDCreateDefaultMappings = 0
+noremap <silent> <C-C> :call NERDComment(0, 'Comment')<CR>
+noremap <silent> <C-X> :call NERDComment(0, 'Uncomment')<CR>
+vnoremap <silent> <C-C> :call NERDComment(0, 'Comment')<CR>
+vnoremap <silent> <C-X> :call NERDComment(0, 'Uncomment')<CR>
 
 " Syntastic Plugin Settings
 let g:syntastic_always_populate_loc_list = 1
