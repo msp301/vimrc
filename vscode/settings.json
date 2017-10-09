@@ -1,0 +1,30 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "vim.enableNeovim": true,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.renderWhitespace": "boundary",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "window.newWindowDimensions": "maximized",
+    "window.enableMenuBarMnemonics": true,
+    "files.hotExit": "onExitAndWindowClose",
+    "debug.inlineValues": true,
+    "vim.hlsearch": true,
+    "vim.statusBarColorControl": true,
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColors": {
+        "normal": "#6a3cc4",
+        "insert": "#268bd2",
+        "visual": "#2aa198",
+        "visualline": "#2aa198",
+        "visualblock": "#2aa198",
+        "replace": "#d33682"
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#6a3cc4",
+        "statusBar.noFolderBackground": "#6a3cc4",
+        "statusBar.debuggingBackground": "#6a3cc4"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0
+}
