@@ -1,30 +1,30 @@
 {
-    "workbench.colorTheme": "Visual Studio Dark",
-    "vim.enableNeovim": true,
-    "vim.disableAnnoyingNeovimMessage": true,
-    "editor.renderWhitespace": "boundary",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "window.newWindowDimensions": "maximized",
-    "window.enableMenuBarMnemonics": true,
-    "files.hotExit": "onExitAndWindowClose",
     "debug.inlineValues": true,
+    "editor.renderWhitespace": "boundary",
+    "files.hotExit": "onExitAndWindowClose",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.enableNeovim": true,
     "vim.hlsearch": true,
     "vim.statusBarColorControl": true,
-    "vim.useSystemClipboard": true,
     "vim.statusBarColors": {
-        "normal": "#6a3cc4",
         "insert": "#268bd2",
+        "normal": "#6a3cc4",
+        "replace": "#d33682",
         "visual": "#2aa198",
-        "visualline": "#2aa198",
         "visualblock": "#2aa198",
-        "replace": "#d33682"
+        "visualline": "#2aa198"
     },
+    "vim.useSystemClipboard": true,
+    "window.enableMenuBarMnemonics": true,
+    "window.newWindowDimensions": "maximized",
+    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "statusBar.background": "#6a3cc4",
-        "statusBar.noFolderBackground": "#6a3cc4",
-        "statusBar.debuggingBackground": "#6a3cc4"
+        "statusBar.debuggingBackground": "#6a3cc4",
+        "statusBar.noFolderBackground": "#6a3cc4"
     },
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 0
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.startupEditor": "newUntitledFile"
 }
