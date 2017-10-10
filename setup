@@ -6,4 +6,4 @@ REPO_DIR=$(dirname "$SCRIPT")
 
 HOSTS_FILE="$REPO_DIR/ansible/hosts"
 
-ANSIBLE_HOSTS="$HOSTS_FILE" ansible-playbook "$REPO_DIR/ansible/playbook.yml" -K --extra-vars "repo_dir=$REPO_DIR"
+ansible-playbook -i "$HOSTS_FILE" "$REPO_DIR/ansible/playbook.yml" -K --extra-vars "repo_dir=$REPO_DIR"
