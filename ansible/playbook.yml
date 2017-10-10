@@ -33,6 +33,9 @@
                 - "{{ zsh_package }}"
             when: item != ""
 
+          - name: Create Neovim config directory
+            file: path=~/.config/nvim state=directory
+
           - name: Symlink Neovim config
             file:
                     src={{ repo_dir }}/init.vim
