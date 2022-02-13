@@ -21,6 +21,7 @@
                 - "{{ git_package }}"
                 - "{{ golang_package }}"
                 - "{{ mono_xbuild }}"
+                - "{{ neovim_package }}"
                 - "{{ node_typescript_package }}"
                 - "{{ npm_package }}"
                 - "{{ python_dev_package }}"
