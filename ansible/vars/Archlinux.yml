@@ -1,7 +1,7 @@
 #
 # Ansible variables file
 #
-# Arch Linux package names
+# Arch Linux / Manjaro package names
 #
 build_essential_package: "base-devel"
 cmake_package: "cmake"
@@ -13,11 +13,11 @@ mono_xbuild: ""
 neovim_package: "neovim"
 node_typescript_package: "typescript"
 npm_package: "npm"
-python_dev_package: "python2"
+python_dev_package: ""
 python3_dev_package: "python"
 sudo_package: "sudo"
 tmux_package: "tmux"
 vim_package: "neovim"
-vim_python2_package: "python2-neovim"
-vim_python3_package: "python-neovim"
+vim_python2_package: ""
+vim_python3_package: ""
 zsh_package: "zsh"
