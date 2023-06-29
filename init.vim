@@ -16,6 +16,10 @@ Plug 'leafgarland/typescript-vim'
 " Deoplete completer for Neovim
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" telescope fuzzy finder
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+
 call plug#end()
 
 set nocompatible
@@ -78,6 +82,10 @@ let g:tagbar_updateonsave_maxlines = 5000
 " Deoplete Plugin Settings
 let g:deoplete#enable_at_startup = 1
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" Telescope Plugin Settings
+nnoremap <C-P> :Telescope find_files<CR>
+nnoremap <C-F> :Telescope live_grep<CR>
 
 " NERDCommenter Plugin Settings
 let g:NERDSpaceDelims = 1
