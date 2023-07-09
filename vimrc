@@ -85,9 +85,9 @@ set ignorecase
 set smartcase
 
 "------Keyboard Shortcuts------
-nmap <F5> :NERDTreeToggle<CR>
-nmap <F6> :TagbarToggle<CR>
-nmap <C-T> :tabedit<CR>
+noremap <F5> :NERDTreeToggle<CR>
+noremap <F6> :TagbarToggle<CR>
+noremap <C-T> :tabedit<CR>
 
 " Indent/Unindent
 noremap <S-Tab> <<
