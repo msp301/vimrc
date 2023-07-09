@@ -88,7 +88,10 @@ set smartcase
 nmap <F5> :NERDTreeToggle<CR>
 nmap <F6> :TagbarToggle<CR>
 nmap <C-T> :tabedit<CR>
-nmap <S-Tab> <<
+
+" Indent/Unindent
+noremap <S-Tab> <<
+inoremap <S-Tab> <ESC><<i
 
 "------Vundle Settings------
 filetype off
