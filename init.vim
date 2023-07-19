@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'kingbin/vim-arduino'
 Plug 'chrisbra/changesPlugin'
-Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 
@@ -19,6 +18,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " telescope fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+
+" Lualine status bar
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
@@ -57,15 +60,26 @@ highlight PmenuSel ctermfg=white ctermbg=darkgrey gui=bold
 "------Plugin Settings------
 
 " Airline Status Bar Settings
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.branch = '⎇ '
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
+lua << END
+require('lualine').setup {
+	options = {
+		component_separators = '',
+		section_separators = { left = '', right = '' }
+	},
+	sections = {
+		lualine_a = { 'mode' },
+		lualine_b = {
+			{ 'branch', icon = '⎇ ' },
+			'diff',
+			'diagnostics',
+		},
+		lualine_c = { 'filename' },
+		lualine_x = { 'encoding', 'fileformat', 'filetype' },
+		lualine_y = { 'progress' },
+		lualine_z = { 'location' },
+	},
+}
+END
 
 " changesPlugin Settings
 let g:changes_vcs_check = 1
