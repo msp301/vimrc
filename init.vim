@@ -91,10 +91,8 @@ nnoremap <C-F> :Telescope live_grep<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDUsePlaceHolders = 0
 let g:NERDCreateDefaultMappings = 0
-noremap <silent> <C-C> :call NERDComment(0, 'Comment')<CR>
-noremap <silent> <C-X> :call NERDComment(0, 'Uncomment')<CR>
-vnoremap <silent> <C-C> :call NERDComment(0, 'Comment')<CR>
-vnoremap <silent> <C-X> :call NERDComment(0, 'Uncomment')<CR>
+noremap <silent> <C-C> :call nerdcommenter#Comment(0, 'Toggle')<CR>
+vnoremap <silent> <C-C> :call nerdcommenter#Comment(0, 'Toggle')<CR>
 
 " Syntastic Plugin Settings
 let g:syntastic_always_populate_loc_list = 1
