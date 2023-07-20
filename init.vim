@@ -59,7 +59,18 @@ set dir=~/.vim-swapdir
 "------Theme Settings------
 set background=dark
 set t_Co=256
-colorscheme tokyonight-night
+
+" Tokyonight theme settings
+lua << END
+require("tokyonight").setup({
+  style = "night",
+  on_highlights = function(highlights, colors)
+      highlights.LineNr = { fg = colors.orange }
+  end,
+})
+END
+
+colorscheme tokyonight
 
 " Omni-completion popup menu
 highlight Pmenu ctermfg=black ctermbg=grey gui=bold
