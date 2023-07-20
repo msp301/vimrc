@@ -22,8 +22,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
-" treesitter syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" LSP management and syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 " Lualine status bar
 Plug 'nvim-lualine/lualine.nvim'
@@ -77,6 +80,15 @@ highlight Pmenu ctermfg=black ctermbg=grey gui=bold
 highlight PmenuSel ctermfg=white ctermbg=darkgrey gui=bold
 
 "------Plugin Settings------
+
+" LSP Setup Settings
+lua << END
+require('mason').setup()
+require('mason-lspconfig').setup {
+    automatic_installation = true
+}
+END
+
 
 " Airline Status Bar Settings
 lua << END
