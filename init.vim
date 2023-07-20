@@ -12,6 +12,9 @@ Plug 'chrisbra/changesPlugin'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 
+" Colorscheme
+Plug 'folke/tokyonight.nvim'
+
 " Deoplete completer for Neovim
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -55,7 +58,7 @@ set dir=~/.vim-swapdir
 "------Theme Settings------
 set background=dark
 set t_Co=256
-colorscheme elflord
+colorscheme tokyonight-night
 
 " Omni-completion popup menu
 highlight Pmenu ctermfg=black ctermbg=grey gui=bold
