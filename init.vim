@@ -160,6 +160,7 @@ set smartindent
 set incsearch
 set ignorecase
 set smartcase
+set nohlsearch
 
 "------Keyboard Shortcuts------
 noremap <F5> :NERDTreeToggle<CR>

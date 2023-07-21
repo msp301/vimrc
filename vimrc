@@ -4,6 +4,7 @@ set nocompatible
 syntax on
 set encoding=utf-8
 set number
+set relativenumber
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -84,6 +85,7 @@ set smartindent
 set incsearch
 set ignorecase
 set smartcase
+set nohlsearch
 
 "------Keyboard Shortcuts------
 noremap <F5> :NERDTreeToggle<CR>
