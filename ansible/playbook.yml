@@ -60,6 +60,12 @@
           - name: Create Vim swap directory
             file: path=~/.vim-swapdir state=directory
 
+          - name: Symlink IdeaVim config for JetBrains IDEs
+            file:
+                    src={{ repo_dir }}/ideavimrc
+                    dest=~/.ideavimrc
+                    state=link
+
           - name: Symlink tmux config
             file:
                     src={{ repo_dir }}/tmux.conf
