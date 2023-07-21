@@ -167,6 +167,10 @@ noremap <F5> :NERDTreeToggle<CR>
 noremap <F6> :TagbarToggle<CR>
 noremap <C-T> :tabedit<CR>
 
+" Keep cursor centered when paging up/down
+nnoremap <C-u> <C-u>zz<CR>
+nnoremap <C-d> <C-d>zz<CR>
+
 " Indent/Unindent
 noremap <S-Tab> <<
 inoremap <S-Tab> <ESC><<i
