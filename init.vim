@@ -15,8 +15,9 @@ Plug 'leafgarland/typescript-vim'
 " Colorscheme
 Plug 'folke/tokyonight.nvim'
 
-" Deoplete completer for Neovim
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Code completion
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 " telescope fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
@@ -124,9 +125,8 @@ highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
 " Tagbar Plugin Settings
 let g:tagbar_updateonsave_maxlines = 5000
 
-" Deoplete Plugin Settings
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" COQ Completion Plugin Settings
+let g:coq_settings = { 'auto_start': 'shut-up' }
 
 " Telescope Plugin Settings
 nnoremap <C-P> :Telescope find_files<CR>
