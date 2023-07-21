@@ -1,0 +1,28 @@
+"------General Settings------
+syntax on
+set encoding=utf-8
+set number
+set relativenumber
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set autoindent
+set wildmenu
+set mouse=a
+set wildmode=list:longest,full
+set laststatus=2
+set showmatch
+set list
+set spelllang=en_gb
+
+"------Search Settings------
+set smartindent
+set incsearch
+set ignorecase
+set smartcase
+set nohlsearch
+
+" Indent/Unindent
+noremap <S-Tab> <<
+inoremap <S-Tab> <ESC><<i
+
