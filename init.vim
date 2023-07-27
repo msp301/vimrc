@@ -46,6 +46,7 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
+set smarttab
 set wildmenu
 set mouse=a
 set wildmode=list:longest,full
