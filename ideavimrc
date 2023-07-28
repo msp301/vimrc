@@ -30,3 +30,7 @@ inoremap <S-Tab> <ESC><<i
 " Keep cursor centered when paging up/down
 nnoremap <C-u> <C-u>zz<CR>
 nnoremap <C-d> <C-d>zz<CR>
+
+" Enable emulated plugins
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
