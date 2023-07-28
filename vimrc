@@ -122,7 +122,7 @@ Plugin 'Syntastic'
 
 "
 " Git repos
-Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/preservim/nerdtree.git'
 Plugin 'https://github.com/kingbin/vim-arduino.git'
 Plugin 'https://github.com/chrisbra/changesPlugin.git'
 Plugin 'https://github.com/bling/vim-airline.git'
