@@ -14,7 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 
 " Colorscheme
-Plug 'folke/tokyonight.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Code completion
 Plug 'ms-jpq/coq.artifacts', { 'branch': 'artifacts' }
@@ -26,8 +26,8 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 " LSP management and syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'williamboman/mason.nvim', { 'branch': 'main' }
+Plug 'williamboman/mason-lspconfig.nvim', { 'branch': 'main' }
 Plug 'neovim/nvim-lspconfig'
 
 " Lualine status bar
