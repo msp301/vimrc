@@ -17,8 +17,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'folke/tokyonight.nvim'
 
 " Code completion
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ms-jpq/coq.artifacts', { 'branch': 'artifacts' }
+Plug 'ms-jpq/coq_nvim', { 'branch': 'coq', 'do': ':COQdeps' }
 
 " telescope fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
