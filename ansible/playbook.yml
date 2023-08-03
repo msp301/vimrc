@@ -18,6 +18,7 @@
                 - "{{ cmake_package }}"
                 - "{{ curl_package }}"
                 - "{{ exuberant_ctags_package }}"
+                - "{{ fd_find_package }}"
                 - "{{ git_package }}"
                 - "{{ golang_package }}"
                 - "{{ mono_xbuild }}"
