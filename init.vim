@@ -13,6 +13,7 @@ Plug 'chrisbra/changesPlugin'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'chentoast/marks.nvim'
 
 " Colorscheme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -102,6 +103,10 @@ require('mason-lspconfig').setup {
 }
 END
 
+" Marks Setup Settings
+lua << END
+require('marks').setup()
+END
 
 " Airline Status Bar Settings
 lua << END
