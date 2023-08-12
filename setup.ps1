@@ -30,10 +30,10 @@ SymlinkDotfile "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 
 ChocoInstall "fd"
 ChocoInstall "git"
+ChocoInstall "microsoft-windows-terminal" "wt"
 ChocoInstall "neovide"
 ChocoInstall "python3-virtualenv" "virtualenv"
 ChocoInstall "ripgrep" "rg"
-ChocoInstall "microsoft-windows-terminal" "wt"
 
 # Install vim-plug
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
