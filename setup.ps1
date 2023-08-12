@@ -28,13 +28,18 @@ function ChocoInstall([string] $package, [string] $executable) {
 SymlinkDotfile "$PSScriptRoot\init.vim" "$env:LOCALAPPDATA\nvim\init.vim"
 SymlinkDotfile "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 
+ChocoInstall "7zip" "7z"
+ChocoInstall "curl"
 ChocoInstall "fd"
 ChocoInstall "git"
 ChocoInstall "microsoft-windows-terminal" "wt"
 ChocoInstall "neovide"
+ChocoInstall "nodejs" "npm"
 ChocoInstall "powertoys"
 ChocoInstall "python3-virtualenv" "virtualenv"
+ChocoInstall "pwsh"
 ChocoInstall "ripgrep" "rg"
+ChocoInstall "zig"
 
 # Install vim-plug
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
