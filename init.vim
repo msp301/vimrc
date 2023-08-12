@@ -9,7 +9,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'kingbin/vim-arduino'
-Plug 'chrisbra/changesPlugin'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
@@ -136,14 +136,12 @@ require('lualine').setup {
 }
 END
 
-" changesPlugin Settings
-let g:changes_vcs_check = 1
-let g:changes_autocmd = 1
-let g:changes_respect_SignColumn = 1
-highlight SignColumn ctermbg=black
-highlight ChangesSignTextAdd ctermbg=green ctermfg=lightgreen
-highlight ChangesSignTextDel ctermbg=red ctermfg=lightred
-highlight ChangesSignTextCh ctermbg=blue ctermfg=lightblue
+" gitsigns Settings
+lua <<END
+require('gitsigns').setup {
+    current_line_blame = true,
+}
+END
 
 " Tagbar Plugin Settings
 let g:tagbar_updateonsave_maxlines = 5000
