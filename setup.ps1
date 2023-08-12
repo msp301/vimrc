@@ -1,11 +1,11 @@
 function SymlinkDotfile([string] $target, [string] $link) {
-	$file = Get-Item $link -Force -ErrorAction SilentlyContinue
-	$exists = [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
+    $file = Get-Item $link -Force -ErrorAction SilentlyContinue
+    $exists = [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
 
-	if(!$exists) {
-		Write-Host "Creating link from '$target' to '$link'"
-		New-Item -ItemType SymbolicLink -Force -Target "$target"  -Path "$link" > $null
-	}
+    if(!$exists) {
+        Write-Host "Creating link from '$target' to '$link'"
+        New-Item -ItemType SymbolicLink -Force -Target "$target"  -Path "$link" > $null
+    }
 }
 
 function ChocoInstall([string] $package, [string] $executable) {
