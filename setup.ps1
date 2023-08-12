@@ -32,6 +32,7 @@ ChocoInstall "fd"
 ChocoInstall "git"
 ChocoInstall "microsoft-windows-terminal" "wt"
 ChocoInstall "neovide"
+ChocoInstall "powertoys"
 ChocoInstall "python3-virtualenv" "virtualenv"
 ChocoInstall "ripgrep" "rg"
 
