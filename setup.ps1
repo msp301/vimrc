@@ -8,14 +8,18 @@ function SymlinkDotfile([string] $target, [string] $link) {
 	}
 }
 
-function ChocoInstall([string] $package) {
+function ChocoInstall([string] $package, [string] $executable) {
     $has_choco = Get-Command -Name choco.exe -ErrorAction SilentlyContinue
     if(!$has_choco) {
         # Install Chocolatey
         Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     }
 
-    $has_package = Get-Command -Name "$package" -ErrorAction SilentlyContinue
+    if($executable -eq '') {
+        $executable = $package
+    }
+
+    $has_package = Get-Command -Name "$executable" -ErrorAction SilentlyContinue
     if(!$has_package) {
         choco install -y "$package"
     }
@@ -27,8 +31,9 @@ SymlinkDotfile "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 ChocoInstall "fd"
 ChocoInstall "git"
 ChocoInstall "neovide"
-ChocoInstall "python3-virtualenv"
-ChocoInstall "ripgrep"
+ChocoInstall "python3-virtualenv" "virtualenv"
+ChocoInstall "ripgrep" "rg"
+ChocoInstall "microsoft-windows-terminal" "wt"
 
 # Install vim-plug
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
