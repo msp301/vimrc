@@ -55,6 +55,9 @@
           - name: Install Neovim plugins
             command: nvim --headless +PlugInstall +qall
 
+          - name: Install Neovim plugins
+            command: nvim --headless +MasonUpdate +qall
+
           - name: Create Vim backup directory
             file: path=~/.vim-backupsdir state=directory
 
