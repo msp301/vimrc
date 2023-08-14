@@ -9,7 +9,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'kingbin/vim-arduino'
-Plug 'lewis6991/gitsigns.nvim'
+Plug 'lewis6991/gitsigns.nvim', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
