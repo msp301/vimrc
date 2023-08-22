@@ -223,6 +223,7 @@ EOF
 " Telescope Plugin Settings
 nnoremap <C-P> :Telescope find_files<CR>
 nnoremap <C-F> :Telescope live_grep<CR>
+nnoremap <C-G> :Telescope git_branches<CR>
 
 " NERDCommenter Plugin Settings
 let g:NERDSpaceDelims = 1
