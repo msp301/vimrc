@@ -76,5 +76,11 @@
                     dest=~/.tmux.conf
                     state=link
 
+          - name: Symlink zsh config
+            file:
+                    src={{ repo_dir }}/zshrc
+                    dest=~/.zshrc
+                    state=link
+
           - name: Install Oh-My-Zsh
             shell: sh -c "$([ $(basename $ZSH) == ".oh-my-zsh" ] || curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
