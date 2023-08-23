@@ -99,5 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gg="cd $(find * -type d | fzf)"
+alias gg="cd \"\$(find * -type d | fzf)\""
+alias GG="cd \"\$(find $HOME/* -type d | fzf)\""
 
