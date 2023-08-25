@@ -99,6 +99,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gg="cd \"\$(find * -type d | fzf)\""
-alias GG="cd \"\$(find $HOME/* -type d | fzf)\""
 
+alias gg="_gg \*"
+alias GG="_gg $HOME/\*"
+
+_gg() {
+    expr=$1
+    query=()
+    if [ $# -gt 1 ]; then
+        query=(--query $2)
+    fi
+
+    cd "$(find $~expr -type d | fzf ${query[@]})"
+}
