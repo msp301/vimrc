@@ -25,12 +25,14 @@ function ChocoInstall([string] $package, [string] $executable) {
     }
 }
 
+SymlinkDotfile "$PSScriptRoot\profile.ps1" "$profile"
 SymlinkDotfile "$PSScriptRoot\init.vim" "$env:LOCALAPPDATA\nvim\init.vim"
 SymlinkDotfile "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 
 ChocoInstall "7zip" "7z"
 ChocoInstall "curl"
 ChocoInstall "fd"
+ChocoInstall "fzf"
 ChocoInstall "git"
 ChocoInstall "microsoft-windows-terminal" "wt"
 ChocoInstall "neovide"
