@@ -100,10 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gg="_gg \*"
-alias GG="_gg $HOME/\*"
+alias g="_goto_dir \*"
+alias gg="_goto_dir $HOME/\*"
 
-_gg() {
+_goto_dir() {
     expr=$1
     query=()
     if [ $# -gt 1 ]; then
