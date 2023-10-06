@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'chentoast/marks.nvim'
+Plug 'github/copilot.vim', { 'branch': 'release' }
 
 " Colorscheme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -247,6 +248,11 @@ let g:syntastic_mode_map = {
 " Syntastic - Perl Checker Settings
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = [ 'perl', 'podchecker' ]
+
+" Copilot Plugin Settings
+let g:copilot_no_tab_remap = 1
+let g:copilot_assume_mapped = 1
+let g:copilot_tab_fallback = ""
 
 "------Search Settings------
 set smartindent
