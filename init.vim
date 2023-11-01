@@ -262,6 +262,10 @@ set smartcase
 set nohlsearch
 
 "------Keyboard Shortcuts------
+let mapleader = "\<Space>"
+
+nnoremap <leader>gf :Telescope grep_string<CR>
+
 noremap <F5> :NERDTreeToggle<CR>
 noremap <F6> :TagbarToggle<CR>
 noremap <C-T> :tabedit<CR>
