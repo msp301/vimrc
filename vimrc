@@ -27,6 +27,8 @@ set clipboard=unnamedplus
 set backupdir=~/.vim-backupsdir
 set dir=~/.vim-swapdir
 
+set scrolloff=8
+
 "------Theme Settings------
 set background=dark
 set t_Co=256
