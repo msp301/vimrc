@@ -1,5 +1,7 @@
 -- General Settings
 
+vim.g.have_nerd_font = true
+
 local opt = vim.opt
 
 opt.number         = true

@@ -23,6 +23,7 @@
                 - "{{ golang_package }}"
                 - "{{ mono_xbuild }}"
                 - "{{ neovim_package }}"
+                - "{{ noto_nerdfont_package }}"
                 - "{{ node_typescript_package }}"
                 - "{{ npm_package }}"
                 - "{{ python3_dev_package }}"
