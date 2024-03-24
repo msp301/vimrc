@@ -1,4 +1,18 @@
-function SymlinkDotfile([string] $target, [string] $link) {
+function Symlink([string] $target, [string] $link) {
+    $file = Get-Item $link -Force -ErrorAction SilentlyContinue
+    $exists = [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
+
+    if($file.PSIsContainer -and !$exists) {
+        Remove-Item -Recurse -Force -Path $link
+    }
+
+    if(!$exists) {
+        Write-Host "Creating link from '$target' to '$link'"
+        New-Item -ItemType SymbolicLink -Force -Target "$target"  -Path "$link" > $null
+    }
+}
+
+function SymlinkDirectory([string] $target, [string] $link) {
     $file = Get-Item $link -Force -ErrorAction SilentlyContinue
     $exists = [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
 
@@ -25,9 +39,9 @@ function ChocoInstall([string] $package, [string] $executable) {
     }
 }
 
-SymlinkDotfile "$PSScriptRoot\profile.ps1" "$profile"
-SymlinkDotfile "$PSScriptRoot\init.vim" "$env:LOCALAPPDATA\nvim\init.vim"
-SymlinkDotfile "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
+Symlink "$PSScriptRoot\profile.ps1" "$profile"
+Symlink "$PSScriptRoot\nvim" "$env:LOCALAPPDATA\nvim";
+Symlink "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 
 ChocoInstall "7zip" "7z"
 ChocoInstall "curl"
@@ -44,13 +58,6 @@ ChocoInstall "python3-virtualenv" "virtualenv"
 ChocoInstall "pwsh"
 ChocoInstall "ripgrep" "rg"
 ChocoInstall "zig"
-
-# Install vim-plug
-Invoke-WebRequest -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    New-Item "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force > $null
-
-nvim --headless +PlugInstall +qall
-nvim --headless +MasonUpdate +qall
 
 Write-Host "Done"
 
