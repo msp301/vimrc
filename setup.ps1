@@ -59,5 +59,7 @@ ChocoInstall "pwsh"
 ChocoInstall "ripgrep" "rg"
 ChocoInstall "zig"
 
+git config --global push.autoSetupRemote true
+
 Write-Host "Done"
 
