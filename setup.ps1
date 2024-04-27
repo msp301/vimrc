@@ -44,6 +44,7 @@ Symlink "$PSScriptRoot\nvim" "$env:LOCALAPPDATA\nvim";
 Symlink "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 
 ChocoInstall "7zip" "7z"
+ChocoInstall "bat"
 ChocoInstall "curl"
 ChocoInstall "fd"
 ChocoInstall "fzf"
