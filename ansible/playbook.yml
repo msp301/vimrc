@@ -14,6 +14,7 @@
             become_user: root
             package: name={{ item }} state=latest
             with_items:
+                - "{{ bat_package }}"
                 - "{{ build_essential_package }}"
                 - "{{ cmake_package }}"
                 - "{{ curl_package }}"
@@ -41,23 +42,10 @@
 
           - name: Symlink Neovim config
             file:
-                    src={{ repo_dir }}/init.vim
-                    dest=~/.config/nvim/init.vim
+                    src={{ repo_dir }}/nvim
+                    dest=~/.config/nvim
                     state=link
-
-          - name: Create vim-plug directory
-            file: path=~/.local/share/nvim/site/autoload state=directory
-
-          - name: Install vim-plug
-            copy:
-                    src={{ repo_dir }}/vim-plug/plug.vim
-                    dest=~/.local/share/nvim/site/autoload/plug.vim
-
-          - name: Install Neovim plugins
-            command: nvim --headless +PlugInstall +qall
-
-          - name: Install Neovim plugins
-            command: nvim --headless +MasonUpdate +qall
+                    force=yes
 
           - name: Create Vim backup directory
             file: path=~/.vim-backupsdir state=directory

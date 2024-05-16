@@ -3,6 +3,7 @@
 #
 # Arch Linux / Manjaro package names
 #
+bat_package: "bat"
 build_essential_package: "base-devel"
 cmake_package: "cmake"
 curl_package: "curl"

@@ -3,6 +3,7 @@
 #
 # Debian package names
 #
+bat_package: "bat"
 build_essential_package: "build-essential"
 cmake_package: "cmake"
 curl_package: "curl"

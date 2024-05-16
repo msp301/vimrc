@@ -41,8 +41,8 @@ opt.scrolloff = 8
 -- Provide access to system clipboard
 opt.clipboard = "unnamedplus"
 
-opt.backupdir = "~/.vim-backupsdir"
-opt.dir = "~/.vim-swapdir"
+opt.backupdir = { vim.fn.expand("~/.vim-backupsdir") }
+opt.dir = { vim.fn.expand("~/.vim-swapdir") }
 
 -- Search Settings
 opt.incsearch = true

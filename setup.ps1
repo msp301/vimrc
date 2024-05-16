@@ -53,6 +53,7 @@ Symlink "$PSScriptRoot\nvim" "$env:LOCALAPPDATA\nvim";
 Symlink "$PSScriptRoot\ideavimrc" "$env:USERPROFILE\.ideavimrc"
 
 ChocoInstall "7zip" "7z"
+ChocoInstall "bat"
 ChocoInstall "curl"
 ChocoInstall "fd"
 ChocoInstall "fzf"
@@ -68,6 +69,8 @@ ChocoInstall "python3-virtualenv" "virtualenv"
 ChocoInstall "pwsh"
 ChocoInstall "ripgrep" "rg"
 ChocoInstall "zig"
+
+git config --global push.autoSetupRemote true
 
 Write-Host "Done"
 
