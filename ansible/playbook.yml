@@ -37,6 +37,16 @@
                 - "{{ zsh_package }}"
             when: item != ""
 
+          - name: Create Foot config directory
+            file: path=~/.config/foot state=directory
+
+          - name: Symlink Foot config
+            file:
+                    src={{ repo_dir }}/foot
+                    dest=~/.config/foot
+                    state=link
+                    force=yes
+
           - name: Create Neovim config directory
             file: path=~/.config/nvim state=directory
 
